@@ -1,0 +1,24 @@
+# QuestaSim / ModelSim generated files
+*.mpf
+*.mti
+*.mpf_new
+*.wlf
+*.docx
+*.ucdb
+*.vstf
+
+# Work libraries
+work/
+**/work/
+
+# Simulation/transcript files
+transcript
+vsim.wlf
+
+# Temporary/editor files
+*.log
+*.bak
+*.swp
+*.tmp
+.DS_Store
+Thumbs.db

@@ -1,0 +1,14 @@
+shift_reg/rtl/shift_reg.v
+shift_reg/uvm/shift_reg_enums.sv
+shift_reg/uvm/shift_reg_seq_item.sv
+shift_reg/uvm/shift_reg_seq.sv
+shift_reg/uvm/shift_reg_sequencer.sv
+shift_reg/uvm/shift_reg_seq.sv
+shift_reg/uvm/shift_reg_config.sv
+shift_reg/uvm/shift_reg_driver.sv
+shift_reg/uvm/shift_reg_monitor.sv
+shift_reg/uvm/shift_reg_agent.sv
+shift_reg/uvm/shift_reg_scoreboard.sv
+shift_reg/uvm/shift_reg_cov_collector.sv
+shift_reg/rtl/shift_reg_if.sv
+shift_reg/uvm/shift_reg_env.sv

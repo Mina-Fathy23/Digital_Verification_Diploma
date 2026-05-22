@@ -1,0 +1,90 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /\top#DUT#shift_reg_dut 
+=== Design Unit: work.shift_reg
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         5         5         0   100.00%
+
+================================Branch Details================================
+
+Branch Coverage for instance /\top#DUT#shift_reg_dut 
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File shift_reg/rtl/shift_reg.v
+------------------------------------IF Branch------------------------------------
+    17                                      1364     Count coming in to IF
+    17              1                        788           if (mode) // rotate
+    23              1                        287              if (direction) // left
+    25              1                        289              else
+Branch totals: 3 hits of 3 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    18                                       788     Count coming in to IF
+    18              1                        392              if (direction) // left
+    20              1                        396              else
+Branch totals: 2 hits of 2 branches = 100.00%
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                       5         5         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /\top#DUT#shift_reg_dut  --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File shift_reg/rtl/shift_reg.v
+    8                                                module shift_reg (serial_in, direction, mode, datain, dataout);
+    9                                                input serial_in, direction, mode;
+    10                                               input [5:0] datain;
+    11                                               output reg [5:0] dataout;
+    12                                               
+    13              1                       1364     always @(*) begin
+    14                                                  // if (reset)
+    15                                                  //    dataout = 0;
+    16                                                  // else
+    17                                                     if (mode) // rotate
+    18                                                        if (direction) // left
+    19              1                        392                 dataout = {datain[4:0], datain[5]};
+    20                                                        else
+    21              1                        396                 dataout = {datain[0], datain[5:1]};
+    22                                                     else // shift
+    23                                                        if (direction) // left
+    24              1                        287                 dataout = {datain[4:0], serial_in};
+    25                                                        else
+    26              1                        289                 dataout = {serial_in, datain[5:1]};
+
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                         30        30         0   100.00%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /\top#DUT#shift_reg_dut  --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                                       datain[0-5]           1           1      100.00 
+                                      dataout[5-0]           1           1      100.00 
+                                         direction           1           1      100.00 
+                                              mode           1           1      100.00 
+                                         serial_in           1           1      100.00 
+
+Total Node Count     =         15 
+Toggled Node Count   =         15 
+Untoggled Node Count =          0 
+
+Toggle Coverage      =     100.00% (30 of 30 bins)
+
+
+Total Coverage By Instance (filtered view): 100.00%
+

@@ -1,0 +1,252 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /top/DUT/binding_all
+=== Design Unit: work.SVA
+=================================================================================
+
+Directive Coverage:
+    Directives                       5         5         0   100.00%
+
+DIRECTIVE COVERAGE:
+--------------------------------------------------------------------------------------------
+Name                                     Design Design   Lang File(Line)      Hits Status    
+                                         Unit   UnitType                                     
+--------------------------------------------------------------------------------------------
+/top/DUT/binding_all/cover_reset         SVA    Verilog  SVA  ram/rtl/Assertions.sv(6)
+                                                                              1585 Covered   
+/top/DUT/binding_all/cover_tx_valid      SVA    Verilog  SVA  ram/rtl/Assertions.sv(13)
+                                                                              20429 Covered   
+/top/DUT/binding_all/cover_tx_valid_fell SVA    Verilog  SVA  ram/rtl/Assertions.sv(19)
+                                                                              2080 Covered   
+/top/DUT/binding_all/cover_wr_add_to_wr_data 
+                                         SVA    Verilog  SVA  ram/rtl/Assertions.sv(25)
+                                                                              16209 Covered   
+/top/DUT/binding_all/cover_rd_add_to_rd_data 
+                                         SVA    Verilog  SVA  ram/rtl/Assertions.sv(31)
+                                                                              16208 Covered   
+
+=================================================================================
+=== Instance: /top/assertion
+=== Design Unit: work.SVA
+=================================================================================
+
+Directive Coverage:
+    Directives                       5         5         0   100.00%
+
+DIRECTIVE COVERAGE:
+--------------------------------------------------------------------------------------------
+Name                                     Design Design   Lang File(Line)      Hits Status    
+                                         Unit   UnitType                                     
+--------------------------------------------------------------------------------------------
+/top/assertion/cover_reset               SVA    Verilog  SVA  ram/rtl/Assertions.sv(6)
+                                                                              1585 Covered   
+/top/assertion/cover_tx_valid            SVA    Verilog  SVA  ram/rtl/Assertions.sv(13)
+                                                                              20429 Covered   
+/top/assertion/cover_tx_valid_fell       SVA    Verilog  SVA  ram/rtl/Assertions.sv(19)
+                                                                              2080 Covered   
+/top/assertion/cover_wr_add_to_wr_data   SVA    Verilog  SVA  ram/rtl/Assertions.sv(25)
+                                                                              16209 Covered   
+/top/assertion/cover_rd_add_to_rd_data   SVA    Verilog  SVA  ram/rtl/Assertions.sv(31)
+                                                                              16208 Covered   
+
+=================================================================================
+=== Instance: /cov_pkg
+=== Design Unit: work.cov_pkg
+=================================================================================
+
+Covergroup Coverage:
+    Covergroups                      1        na        na   100.00%
+        Coverpoints/Crosses          5        na        na        na
+            Covergroup Bins         13        13         0   100.00%
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /cov_pkg/ram_coverage/cvr_gp                    100.00%        100          -    Covered              
+    covered/total bins:                                    13         13          -                      
+    missing/total bins:                                     0         13          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint Transaction_ordering_cp                100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint rx_valid_high_cp                       100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint tx_valid_high_cp                       100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+    Cross rx_valid_with_all_bins_din                  100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+    Cross rd_data_with_tx_valid_high                  100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+ Covergroup instance \/cov_pkg::ram_coverage::cvr_gp  
+                                                      100.00%        100          -    Covered              
+    covered/total bins:                                    13         13          -                      
+    missing/total bins:                                     0         13          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint Transaction_ordering_cp                100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin possible_values                             30001          1          -    Covered              
+        bin write_address_then_write_data                5653          1          -    Covered              
+        bin read_address_then_read_data                  5760          1          -    Covered              
+        bin wr_address_then_wr_data_rd_address_then_rd_data 
+                                                         1073          1          -    Covered              
+    Coverpoint rx_valid_high_cp                       100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin rx_valid_high                               28485          1          -    Covered              
+    Coverpoint tx_valid_high_cp                       100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin tx_valid_high                                6871          1          -    Covered              
+    Cross rx_valid_with_all_bins_din                  100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <wr_address_then_wr_data_rd_address_then_rd_data,rx_valid_high> 
+                                                         1012          1          -    Covered              
+            bin <read_address_then_read_data,rx_valid_high> 
+                                                         5460          1          -    Covered              
+            bin <write_address_then_write_data,rx_valid_high> 
+                                                         5363          1          -    Covered              
+            bin <possible_values,rx_valid_high>         28485          1          -    Covered              
+    Cross rd_data_with_tx_valid_high                  100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <wr_address_then_wr_data_rd_address_then_rd_data,tx_valid_high> 
+                                                         1010          1          -    Covered              
+            bin <read_address_then_read_data,tx_valid_high> 
+                                                         5459          1          -    Covered              
+            bin <possible_values,tx_valid_high>          6871          1          -    Covered              
+        Illegal and Ignore Bins:
+            ignore_bin write_address_then_write_data_with_tx_valid_high 
+                                                            0                     -    ZERO                 
+
+COVERGROUP COVERAGE:
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /cov_pkg/ram_coverage/cvr_gp                    100.00%        100          -    Covered              
+    covered/total bins:                                    13         13          -                      
+    missing/total bins:                                     0         13          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint Transaction_ordering_cp                100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint rx_valid_high_cp                       100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint tx_valid_high_cp                       100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+    Cross rx_valid_with_all_bins_din                  100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+    Cross rd_data_with_tx_valid_high                  100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+ Covergroup instance \/cov_pkg::ram_coverage::cvr_gp  
+                                                      100.00%        100          -    Covered              
+    covered/total bins:                                    13         13          -                      
+    missing/total bins:                                     0         13          -                      
+    % Hit:                                            100.00%        100          -                      
+    Coverpoint Transaction_ordering_cp                100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin possible_values                             30001          1          -    Covered              
+        bin write_address_then_write_data                5653          1          -    Covered              
+        bin read_address_then_read_data                  5760          1          -    Covered              
+        bin wr_address_then_wr_data_rd_address_then_rd_data 
+                                                         1073          1          -    Covered              
+    Coverpoint rx_valid_high_cp                       100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin rx_valid_high                               28485          1          -    Covered              
+    Coverpoint tx_valid_high_cp                       100.00%        100          -    Covered              
+        covered/total bins:                                 1          1          -                      
+        missing/total bins:                                 0          1          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin tx_valid_high                                6871          1          -    Covered              
+    Cross rx_valid_with_all_bins_din                  100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <wr_address_then_wr_data_rd_address_then_rd_data,rx_valid_high> 
+                                                         1012          1          -    Covered              
+            bin <read_address_then_read_data,rx_valid_high> 
+                                                         5460          1          -    Covered              
+            bin <write_address_then_write_data,rx_valid_high> 
+                                                         5363          1          -    Covered              
+            bin <possible_values,rx_valid_high>         28485          1          -    Covered              
+    Cross rd_data_with_tx_valid_high                  100.00%        100          -    Covered              
+        covered/total bins:                                 3          3          -                      
+        missing/total bins:                                 0          3          -                      
+        % Hit:                                        100.00%        100          -                      
+        Auto, Default and User Defined Bins:
+            bin <wr_address_then_wr_data_rd_address_then_rd_data,tx_valid_high> 
+                                                         1010          1          -    Covered              
+            bin <read_address_then_read_data,tx_valid_high> 
+                                                         5459          1          -    Covered              
+            bin <possible_values,tx_valid_high>          6871          1          -    Covered              
+        Illegal and Ignore Bins:
+            ignore_bin write_address_then_write_data_with_tx_valid_high 
+                                                            0                     -    ZERO                 
+
+TOTAL COVERGROUP COVERAGE: 100.00%  COVERGROUP TYPES: 1
+
+DIRECTIVE COVERAGE:
+--------------------------------------------------------------------------------------------
+Name                                     Design Design   Lang File(Line)      Hits Status    
+                                         Unit   UnitType                                     
+--------------------------------------------------------------------------------------------
+/top/DUT/binding_all/cover_reset         SVA    Verilog  SVA  ram/rtl/Assertions.sv(6)
+                                                                              1585 Covered   
+/top/DUT/binding_all/cover_tx_valid      SVA    Verilog  SVA  ram/rtl/Assertions.sv(13)
+                                                                              20429 Covered   
+/top/DUT/binding_all/cover_tx_valid_fell SVA    Verilog  SVA  ram/rtl/Assertions.sv(19)
+                                                                              2080 Covered   
+/top/DUT/binding_all/cover_wr_add_to_wr_data 
+                                         SVA    Verilog  SVA  ram/rtl/Assertions.sv(25)
+                                                                              16209 Covered   
+/top/DUT/binding_all/cover_rd_add_to_rd_data 
+                                         SVA    Verilog  SVA  ram/rtl/Assertions.sv(31)
+                                                                              16208 Covered   
+/top/assertion/cover_reset               SVA    Verilog  SVA  ram/rtl/Assertions.sv(6)
+                                                                              1585 Covered   
+/top/assertion/cover_tx_valid            SVA    Verilog  SVA  ram/rtl/Assertions.sv(13)
+                                                                              20429 Covered   
+/top/assertion/cover_tx_valid_fell       SVA    Verilog  SVA  ram/rtl/Assertions.sv(19)
+                                                                              2080 Covered   
+/top/assertion/cover_wr_add_to_wr_data   SVA    Verilog  SVA  ram/rtl/Assertions.sv(25)
+                                                                              16209 Covered   
+/top/assertion/cover_rd_add_to_rd_data   SVA    Verilog  SVA  ram/rtl/Assertions.sv(31)
+                                                                              16208 Covered   
+
+TOTAL DIRECTIVE COVERAGE: 100.00%  COVERS: 10
+
+Total Coverage By Instance (filtered view): 100.00%
+

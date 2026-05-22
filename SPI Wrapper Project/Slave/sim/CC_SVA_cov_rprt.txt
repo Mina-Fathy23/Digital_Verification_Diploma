@@ -1,0 +1,561 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /\top#DUT /slave_bind
+=== Design Unit: work.SLAVE_sva
+=================================================================================
+
+Assertion Coverage:
+    Assertions                       5         5         0   100.00%
+--------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass 
+                                                  Count        Count
+--------------------------------------------------------------------
+/\top#DUT /slave_bind/assert__3
+                     ../rtl/SPI_sva.sv(46)              0          1
+/\top#DUT /slave_bind/assert__2
+                     ../rtl/SPI_sva.sv(38)              0          1
+/\top#DUT /slave_bind/assert__1
+                     ../rtl/SPI_sva.sv(30)              0          1
+/\top#DUT /slave_bind/assert__0
+                     ../rtl/SPI_sva.sv(22)              0          1
+/\top#DUT /slave_bind/assert__p_reset_outputs_low
+                     ../rtl/SPI_sva.sv(14)              0          1
+
+Directive Coverage:
+    Directives                       5         5         0   100.00%
+
+DIRECTIVE COVERAGE:
+--------------------------------------------------------------------------------------------
+Name                                     Design Design   Lang File(Line)      Hits Status    
+                                         Unit   UnitType                                     
+--------------------------------------------------------------------------------------------
+/\top#DUT /slave_bind/cover__3           SLAVE_sva Verilog  SVA  ../rtl/SPI_sva.sv(47)
+                                                                                59 Covered   
+/\top#DUT /slave_bind/cover__2           SLAVE_sva Verilog  SVA  ../rtl/SPI_sva.sv(39)
+                                                                                59 Covered   
+/\top#DUT /slave_bind/cover__1           SLAVE_sva Verilog  SVA  ../rtl/SPI_sva.sv(31)
+                                                                                57 Covered   
+/\top#DUT /slave_bind/cover__0           SLAVE_sva Verilog  SVA  ../rtl/SPI_sva.sv(23)
+                                                                                66 Covered   
+/\top#DUT /slave_bind/cover__p_reset_outputs_low 
+                                         SLAVE_sva Verilog  SVA  ../rtl/SPI_sva.sv(15)
+                                                                               200 Covered   
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                         50        50         0   100.00%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /\top#DUT /slave_bind --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                                              MISO           1           1      100.00 
+                                              MOSI           1           1      100.00 
+                                              SS_n           1           1      100.00 
+                                               clk           1           1      100.00 
+                                             rst_n           1           1      100.00 
+                                      rx_data[0-9]           1           1      100.00 
+                                          rx_valid           1           1      100.00 
+                                      tx_data[0-7]           1           1      100.00 
+                                          tx_valid           1           1      100.00 
+
+Total Node Count     =         25 
+Toggled Node Count   =         25 
+Untoggled Node Count =          0 
+
+Toggle Coverage      =     100.00% (50 of 50 bins)
+
+=================================================================================
+=== Instance: /\top#DUT 
+=== Design Unit: work.SLAVE
+=================================================================================
+
+Assertion Coverage:
+    Assertions                       6         4         2    66.66%
+--------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass 
+                                                  Count        Count
+--------------------------------------------------------------------
+/\top#DUT /assert__5 ../rtl/SPI_slave.sv(139)           0          0
+/\top#DUT /assert__4 ../rtl/SPI_slave.sv(138)           0          0
+/\top#DUT /assert__3 ../rtl/SPI_slave.sv(136)           0          1
+/\top#DUT /assert__2 ../rtl/SPI_slave.sv(135)           0          1
+/\top#DUT /assert__1 ../rtl/SPI_slave.sv(134)           0          1
+/\top#DUT /assert__0 ../rtl/SPI_slave.sv(133)           0          1
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        40        39         1    97.50%
+
+================================Branch Details================================
+
+Branch Coverage for instance /\top#DUT 
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../rtl/SPI_slave.sv
+------------------------------------IF Branch------------------------------------
+    20                                      2654     Count coming in to IF
+    20              1                        200         if (~rst_n) begin
+    23              1                       2454         else begin
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------CASE Branch------------------------------------
+    29                                      7876     Count coming in to CASE
+    30              1                       1352             IDLE : begin
+    36              1                        972             CHK_CMD : begin
+    50              1                       1674             WRITE : begin
+    56              1                       2061             READ_ADD : begin
+    62              1                       1816             READ_DATA : begin
+                                               1     All False Count
+Branch totals: 6 hits of 6 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    31                                      1352     Count coming in to IF
+    31              1                        681                 if (SS_n)
+    33              1                        671                 else
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    37                                       972     Count coming in to IF
+    37              1                         15                 if (SS_n)
+    39              1                        957                 else begin
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    40                                       957     Count coming in to IF
+    40              1                        550                     if (~MOSI)
+    42              1                        407                     else begin
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    43                                       407     Count coming in to IF
+    43              1                        224                         if (!received_address) // not(!) is added 
+    45              1                        183                         else
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    51                                      1674     Count coming in to IF
+    51              1                        253                 if (SS_n)
+    53              1                       1421                 else
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    57                                      2061     Count coming in to IF
+    57              1                        219                 if (SS_n)
+    59              1                       1842                 else
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    63                                      1816     Count coming in to IF
+    63              1                        183                 if (SS_n)
+    65              1                       1633                 else
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    72                                     10000     Count coming in to IF
+    72              1                        200         if (~rst_n) begin 
+    79              1                       9800         else begin
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------CASE Branch------------------------------------
+    80                                      9800     Count coming in to CASE
+    81              1                        671                 IDLE : begin
+    84              1                        656                 CHK_CMD : begin
+    87              1                       2616                 WRITE : begin
+    96              1                       2907                 READ_ADD : begin
+    106             1                       2950                 READ_DATA : begin
+                                         ***0***     All False Count
+Branch totals: 5 hits of 6 branches = 83.33%
+
+------------------------------------IF Branch------------------------------------
+    88                                      2616     Count coming in to IF
+    88              1                       2227                     if (counter > 0) begin
+    92              1                        389                     else begin
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    97                                      2907     Count coming in to IF
+    97              1                       1997                     if (counter > 0) begin
+    101             1                        910                     else begin
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    107                                     2950     Count coming in to IF
+    107             1                       1090                     if (tx_valid) begin
+    117             1                       1860                     else begin
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    109                                     1090     Count coming in to IF
+    109             1                        953                         if (counter > 0) begin
+    113             1                        137                         else begin
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    118                                     1860     Count coming in to IF
+    118             1                       1663                         if (counter > 0) begin
+    122             1                        197                         else begin
+Branch totals: 2 hits of 2 branches = 100.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                       4         4         0   100.00%
+
+================================Condition Details================================
+
+Condition Coverage for instance /\top#DUT  --
+
+  File ../rtl/SPI_slave.sv
+----------------Focused Condition View-------------------
+Line       88 Item    1  (counter > 0)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+     Input Term   Covered  Reason for no coverage   Hint
+    -----------  --------  -----------------------  --------------
+  (counter > 0)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (counter > 0)_0       -                             
+  Row   2:          1  (counter > 0)_1       -                             
+
+----------------Focused Condition View-------------------
+Line       97 Item    1  (counter > 0)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+     Input Term   Covered  Reason for no coverage   Hint
+    -----------  --------  -----------------------  --------------
+  (counter > 0)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (counter > 0)_0       -                             
+  Row   2:          1  (counter > 0)_1       -                             
+
+----------------Focused Condition View-------------------
+Line       109 Item    1  (counter > 0)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+     Input Term   Covered  Reason for no coverage   Hint
+    -----------  --------  -----------------------  --------------
+  (counter > 0)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (counter > 0)_0       -                             
+  Row   2:          1  (counter > 0)_1       -                             
+
+----------------Focused Condition View-------------------
+Line       118 Item    1  (counter > 0)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+     Input Term   Covered  Reason for no coverage   Hint
+    -----------  --------  -----------------------  --------------
+  (counter > 0)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (counter > 0)_0       -                             
+  Row   2:          1  (counter > 0)_1       -                             
+
+
+
+Directive Coverage:
+    Directives                       6         6         0   100.00%
+
+DIRECTIVE COVERAGE:
+--------------------------------------------------------------------------------------------
+Name                                     Design Design   Lang File(Line)      Hits Status    
+                                         Unit   UnitType                                     
+--------------------------------------------------------------------------------------------
+/\top#DUT /cover__5                      SLAVE  Verilog  SVA  ../rtl/SPI_slave.sv(146)
+                                                                                92 Covered   
+/\top#DUT /cover__4                      SLAVE  Verilog  SVA  ../rtl/SPI_slave.sv(145)
+                                                                               109 Covered   
+/\top#DUT /cover__3                      SLAVE  Verilog  SVA  ../rtl/SPI_slave.sv(144)
+                                                                               646 Covered   
+/\top#DUT /cover__2                      SLAVE  Verilog  SVA  ../rtl/SPI_slave.sv(143)
+                                                                               398 Covered   
+/\top#DUT /cover__1                      SLAVE  Verilog  SVA  ../rtl/SPI_slave.sv(142)
+                                                                               248 Covered   
+/\top#DUT /cover__0                      SLAVE  Verilog  SVA  ../rtl/SPI_slave.sv(141)
+                                                                               656 Covered   
+FSM Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    FSM States                       5         5         0   100.00%
+    FSM Transitions                  8         8         0   100.00%
+
+================================FSM Details================================
+
+FSM Coverage for instance /\top#DUT  --
+
+FSM_ID: cs
+    Current State Object : cs
+    ----------------------
+    State Value MapInfo :
+    ---------------------
+Line          State Name               Value
+----          ----------               -----
+  30                IDLE                   0
+  36             CHK_CMD                   1
+  62           READ_DATA                   4
+  56            READ_ADD                   3
+  50               WRITE                   2
+    Covered States :
+    ----------------
+                   State           Hit_count
+                   -----           ---------
+                    IDLE                 681          
+                 CHK_CMD                 671          
+               READ_DATA                 364          
+                READ_ADD                 437          
+                   WRITE                 501          
+    Covered Transitions :
+    ---------------------
+Line            Trans_ID           Hit_count          Transition          
+----            --------           ---------          ----------          
+  34                   0                 671          IDLE -> CHK_CMD               
+  46                   1                 183          CHK_CMD -> READ_DATA          
+  44                   2                 220          CHK_CMD -> READ_ADD           
+  41                   3                 253          CHK_CMD -> WRITE              
+  38                   4                  15          CHK_CMD -> IDLE               
+  64                   5                 183          READ_DATA -> IDLE             
+  58                   6                 219          READ_ADD -> IDLE              
+  52                   7                 253          WRITE -> IDLE                 
+
+
+    Summary                       Bins      Hits    Misses  Coverage
+    -------                       ----      ----    ------  --------
+        FSM States                   5         5         0   100.00%
+        FSM Transitions              8         8         0   100.00%
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      39        39         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /\top#DUT  --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../rtl/SPI_slave.sv
+    1                                                module SLAVE (MOSI,MISO,SS_n,clk,rst_n,rx_data,rx_valid,tx_data,tx_valid);
+    2                                                
+    3                                                localparam IDLE      = 3'b000;
+    4                                                localparam CHK_CMD   = 3'b001; ///
+    5                                                localparam WRITE     = 3'b010;
+    6                                                localparam READ_ADD  = 3'b011;
+    7                                                localparam READ_DATA = 3'b100;
+    8                                                
+    9                                                input            MOSI, clk, rst_n, SS_n, tx_valid;
+    10                                               input      [7:0] tx_data;
+    11                                               output reg [9:0] rx_data;
+    12                                               output reg       rx_valid, MISO;
+    13                                               
+    14                                               reg [3:0] counter;
+    15                                               reg       received_address;
+    16                                               
+    17                                               reg [2:0] cs, ns;
+    18                                               
+    19              1                       2654     always @(posedge clk) begin
+    20                                                   if (~rst_n) begin
+    21              1                        200             cs <= IDLE;
+    22                                                   end
+    23                                                   else begin
+    24              1                       2454             cs <= ns;
+    25                                                   end
+    26                                               end
+    27                                               
+    28              1                       7876     always @(*) begin
+    29                                                   case (cs)
+    30                                                       IDLE : begin
+    31                                                           if (SS_n)
+    32              1                        681                     ns = IDLE;
+    33                                                           else
+    34              1                        671                     ns = CHK_CMD;
+    35                                                       end
+    36                                                       CHK_CMD : begin
+    37                                                           if (SS_n)
+    38              1                         15                     ns = IDLE;
+    39                                                           else begin
+    40                                                               if (~MOSI)
+    41              1                        550                         ns = WRITE;
+    42                                                               else begin
+    43                                                                   if (!received_address) // not(!) is added 
+    44              1                        224                             ns = READ_ADD; 
+    45                                                                   else
+    46              1                        183                             ns = READ_DATA;
+    47                                                               end
+    48                                                           end
+    49                                                       end
+    50                                                       WRITE : begin
+    51                                                           if (SS_n)
+    52              1                        253                     ns = IDLE;
+    53                                                           else
+    54              1                       1421                     ns = WRITE;
+    55                                                       end
+    56                                                       READ_ADD : begin
+    57                                                           if (SS_n)
+    58              1                        219                     ns = IDLE;
+    59                                                           else
+    60              1                       1842                     ns = READ_ADD;
+    61                                                       end
+    62                                                       READ_DATA : begin
+    63                                                           if (SS_n)
+    64              1                        183                     ns = IDLE;
+    65                                                           else
+    66              1                       1633                     ns = READ_DATA;
+    67                                                       end
+    68                                                   endcase
+    69                                               end
+    70                                               
+    71              1                      10000     always @(posedge clk) begin
+    72                                                   if (~rst_n) begin 
+    73              1                        200             rx_data <= 0;
+    74              1                        200             rx_valid <= 0;
+    75              1                        200             counter <= 0; // 
+    76              1                        200             received_address <= 0;
+    77              1                        200             MISO <= 0;
+    78                                                   end
+    79                                                   else begin
+    80                                                       case (cs)
+    81                                                           IDLE : begin
+    82              1                        671                     rx_valid <= 0 ;
+    83                                                           end
+    84                                                           CHK_CMD : begin
+    85              1                        656                     counter <= 10;      
+    86                                                           end
+    87                                                           WRITE : begin
+    88                                                               if (counter > 0) begin
+    89              1                       2227                         rx_data[counter-1] <= MOSI;
+    90              1                       2227                         counter <= counter - 1;
+    91                                                               end
+    92                                                               else begin
+    93              1                        389                         rx_valid <= 1;
+    94                                                               end
+    95                                                           end
+    96                                                           READ_ADD : begin
+    97                                                               if (counter > 0) begin
+    98              1                       1997                         rx_data[counter-1] <= MOSI;
+    99              1                       1997                         counter <= counter - 1;
+    100                                                              end
+    101                                                              else begin
+    102             1                        910                         rx_valid <= 1;
+    103             1                        910                         received_address <= 1;
+    104                                                              end
+    105                                                          end
+    106                                                          READ_DATA : begin
+    107                                                              if (tx_valid) begin
+    108             1                       1090                         rx_valid <= 0;
+    109                                                                  if (counter > 0) begin
+    110             1                        953                             MISO <= tx_data[counter-1];
+    111             1                        953                             counter <= counter - 1;
+    112                                                                  end
+    113                                                                  else begin
+    114             1                        137                             received_address <= 0;
+    115                                                                  end
+    116                                                              end
+    117                                                              else begin
+    118                                                                  if (counter > 0) begin
+    119             1                       1663                             rx_data[counter-1] <= MOSI;
+    120             1                       1663                             counter <= counter - 1;
+    121                                                                  end
+    122                                                                  else begin
+    123             1                        197                             rx_valid <= 1;
+    124             1                        197                             counter <= 9 ; // 
+
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                         72        72         0   100.00%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /\top#DUT  --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                                              MISO           1           1      100.00 
+                                              MOSI           1           1      100.00 
+                                              SS_n           1           1      100.00 
+                                               clk           1           1      100.00 
+                                      counter[3-0]           1           1      100.00 
+                                           cs[2-0]           1           1      100.00 
+                                           ns[2-0]           1           1      100.00 
+                                  received_address           1           1      100.00 
+                                             rst_n           1           1      100.00 
+                                      rx_data[9-0]           1           1      100.00 
+                                          rx_valid           1           1      100.00 
+                                      tx_data[0-7]           1           1      100.00 
+                                          tx_valid           1           1      100.00 
+
+Total Node Count     =         36 
+Toggled Node Count   =         36 
+Untoggled Node Count =          0 
+
+Toggle Coverage      =     100.00% (72 of 72 bins)
+
+
+DIRECTIVE COVERAGE:
+--------------------------------------------------------------------------------------------
+Name                                     Design Design   Lang File(Line)      Hits Status    
+                                         Unit   UnitType                                     
+--------------------------------------------------------------------------------------------
+/\top#DUT /cover__5                      SLAVE  Verilog  SVA  ../rtl/SPI_slave.sv(146)
+                                                                                92 Covered   
+/\top#DUT /cover__4                      SLAVE  Verilog  SVA  ../rtl/SPI_slave.sv(145)
+                                                                               109 Covered   
+/\top#DUT /cover__3                      SLAVE  Verilog  SVA  ../rtl/SPI_slave.sv(144)
+                                                                               646 Covered   
+/\top#DUT /cover__2                      SLAVE  Verilog  SVA  ../rtl/SPI_slave.sv(143)
+                                                                               398 Covered   
+/\top#DUT /cover__1                      SLAVE  Verilog  SVA  ../rtl/SPI_slave.sv(142)
+                                                                               248 Covered   
+/\top#DUT /cover__0                      SLAVE  Verilog  SVA  ../rtl/SPI_slave.sv(141)
+                                                                               656 Covered   
+/\top#DUT /slave_bind/cover__3           SLAVE_sva Verilog  SVA  ../rtl/SPI_sva.sv(47)
+                                                                                59 Covered   
+/\top#DUT /slave_bind/cover__2           SLAVE_sva Verilog  SVA  ../rtl/SPI_sva.sv(39)
+                                                                                59 Covered   
+/\top#DUT /slave_bind/cover__1           SLAVE_sva Verilog  SVA  ../rtl/SPI_sva.sv(31)
+                                                                                57 Covered   
+/\top#DUT /slave_bind/cover__0           SLAVE_sva Verilog  SVA  ../rtl/SPI_sva.sv(23)
+                                                                                66 Covered   
+/\top#DUT /slave_bind/cover__p_reset_outputs_low 
+                                         SLAVE_sva Verilog  SVA  ../rtl/SPI_sva.sv(15)
+                                                                               200 Covered   
+
+TOTAL DIRECTIVE COVERAGE: 100.00%  COVERS: 11
+
+ASSERTION RESULTS:
+--------------------------------------------------------------------
+Name                 File(Line)                   Failure      Pass 
+                                                  Count        Count
+--------------------------------------------------------------------
+/\top#DUT /assert__5 ../rtl/SPI_slave.sv(139)           0          0
+/\top#DUT /assert__4 ../rtl/SPI_slave.sv(138)           0          0
+/\top#DUT /assert__3 ../rtl/SPI_slave.sv(136)           0          1
+/\top#DUT /assert__2 ../rtl/SPI_slave.sv(135)           0          1
+/\top#DUT /assert__1 ../rtl/SPI_slave.sv(134)           0          1
+/\top#DUT /assert__0 ../rtl/SPI_slave.sv(133)           0          1
+/\top#DUT /slave_bind/assert__3
+                     ../rtl/SPI_sva.sv(46)              0          1
+/\top#DUT /slave_bind/assert__2
+                     ../rtl/SPI_sva.sv(38)              0          1
+/\top#DUT /slave_bind/assert__1
+                     ../rtl/SPI_sva.sv(30)              0          1
+/\top#DUT /slave_bind/assert__0
+                     ../rtl/SPI_sva.sv(22)              0          1
+/\top#DUT /slave_bind/assert__p_reset_outputs_low
+                     ../rtl/SPI_sva.sv(14)              0          1
+
+Total Coverage By Instance (filtered view): 97.41%
+

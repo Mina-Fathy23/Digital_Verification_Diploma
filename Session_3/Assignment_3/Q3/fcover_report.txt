@@ -1,0 +1,128 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /ALSU_pkg
+=== Design Unit: work.ALSU_pkg
+=================================================================================
+
+Covergroup Coverage:
+    Covergroups                      1        na        na    95.23%
+        Coverpoints/Crosses          3        na        na        na
+            Covergroup Bins         15        14         1    93.33%
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /ALSU_pkg/ALSU_inputs/CovCode                    95.23%        100          -    Uncovered            
+    covered/total bins:                                    14         15          -                      
+    missing/total bins:                                     1         15          -                      
+    % Hit:                                             93.33%        100          -                      
+    Coverpoint A_CP                                   100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint B_CP                                   100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint ALU_cp                                  85.71%        100          -    Uncovered            
+        covered/total bins:                                 6          7          -                      
+        missing/total bins:                                 1          7          -                      
+        % Hit:                                         85.71%        100          -                      
+ Covergroup instance \/ALSU_pkg::ALSU_inputs::CovCode  
+                                                       95.23%        100          -    Uncovered            
+    covered/total bins:                                    14         15          -                      
+    missing/total bins:                                     1         15          -                      
+    % Hit:                                             93.33%        100          -                      
+    Coverpoint A_CP                                   100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin A_data_0                                      126          1          -    Covered              
+        bin A_data_max                                    152          1          -    Covered              
+        bin A_data_walkingones[1]                           4          1          -    Covered              
+        bin A_data_walkingones[2]                           2          1          -    Covered              
+        default bin A_data_default                        132                     -    Occurred             
+    Coverpoint B_CP                                   100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin B_data_0                                      118          1          -    Covered              
+        bin B_data_max                                    124          1          -    Covered              
+        bin B_data_walkingones[1]                           2          1          -    Covered              
+        bin B_data_walkingones[2]                           4          1          -    Covered              
+        default bin B_data_default                        134                     -    Occurred             
+    Coverpoint ALU_cp                                  85.71%        100          -    Uncovered            
+        covered/total bins:                                 6          7          -                      
+        missing/total bins:                                 1          7          -                      
+        % Hit:                                         85.71%        100          -                      
+        illegal_bin Bins_invalid                           30                     -    Occurred             
+        bin Bins_shift[SHIFT]                              76          1          -    Covered              
+        bin Bins_shift[ROTATE]                             74          1          -    Covered              
+        bin Bins_arith[ADD]                                90          1          -    Covered              
+        bin Bins_arith[MULT]                               78          1          -    Covered              
+        bin Bins_bitwise[OR]                                6          1          -    Covered              
+        bin Bins_bitwise[XOR]                              70          1          -    Covered              
+        bin Bins_trans                                      0          1          -    ZERO                 
+
+COVERGROUP COVERAGE:
+----------------------------------------------------------------------------------------------------------
+Covergroup                                             Metric       Goal       Bins    Status               
+                                                                                                         
+----------------------------------------------------------------------------------------------------------
+ TYPE /ALSU_pkg/ALSU_inputs/CovCode                    95.23%        100          -    Uncovered            
+    covered/total bins:                                    14         15          -                      
+    missing/total bins:                                     1         15          -                      
+    % Hit:                                             93.33%        100          -                      
+    Coverpoint A_CP                                   100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint B_CP                                   100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+    Coverpoint ALU_cp                                  85.71%        100          -    Uncovered            
+        covered/total bins:                                 6          7          -                      
+        missing/total bins:                                 1          7          -                      
+        % Hit:                                         85.71%        100          -                      
+ Covergroup instance \/ALSU_pkg::ALSU_inputs::CovCode  
+                                                       95.23%        100          -    Uncovered            
+    covered/total bins:                                    14         15          -                      
+    missing/total bins:                                     1         15          -                      
+    % Hit:                                             93.33%        100          -                      
+    Coverpoint A_CP                                   100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin A_data_0                                      126          1          -    Covered              
+        bin A_data_max                                    152          1          -    Covered              
+        bin A_data_walkingones[1]                           4          1          -    Covered              
+        bin A_data_walkingones[2]                           2          1          -    Covered              
+        default bin A_data_default                        132                     -    Occurred             
+    Coverpoint B_CP                                   100.00%        100          -    Covered              
+        covered/total bins:                                 4          4          -                      
+        missing/total bins:                                 0          4          -                      
+        % Hit:                                        100.00%        100          -                      
+        bin B_data_0                                      118          1          -    Covered              
+        bin B_data_max                                    124          1          -    Covered              
+        bin B_data_walkingones[1]                           2          1          -    Covered              
+        bin B_data_walkingones[2]                           4          1          -    Covered              
+        default bin B_data_default                        134                     -    Occurred             
+    Coverpoint ALU_cp                                  85.71%        100          -    Uncovered            
+        covered/total bins:                                 6          7          -                      
+        missing/total bins:                                 1          7          -                      
+        % Hit:                                         85.71%        100          -                      
+        illegal_bin Bins_invalid                           30                     -    Occurred             
+        bin Bins_shift[SHIFT]                              76          1          -    Covered              
+        bin Bins_shift[ROTATE]                             74          1          -    Covered              
+        bin Bins_arith[ADD]                                90          1          -    Covered              
+        bin Bins_arith[MULT]                               78          1          -    Covered              
+        bin Bins_bitwise[OR]                                6          1          -    Covered              
+        bin Bins_bitwise[XOR]                              70          1          -    Covered              
+        bin Bins_trans                                      0          1          -    ZERO                 
+
+TOTAL COVERGROUP COVERAGE: 95.23%  COVERGROUP TYPES: 1
+
+Total Coverage By Instance (filtered view): 95.23%
+

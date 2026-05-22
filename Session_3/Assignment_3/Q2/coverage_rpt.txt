@@ -1,0 +1,152 @@
+Coverage Report by instance with details
+
+=================================================================================
+=== Instance: /\counter_tb#DUT 
+=== Design Unit: work.counter
+=================================================================================
+Branch Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        10        10         0   100.00%
+
+================================Branch Details================================
+
+Branch Coverage for instance /\counter_tb#DUT 
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File counter.v
+------------------------------------IF Branch------------------------------------
+    21                                       205     Count coming in to IF
+    21              1                          2         if (~rst_n)                     //Modification: changed comparison "!" to bitwise NOT "~"
+    23              1                         71         else if (~load_n)               //Modification: changed comparison "!" to bitwise NOT "~"
+    25              1                         92         else if (ce)begin               //Fixed BUg: added Begin and End statments
+                                              40     All False Count
+Branch totals: 4 hits of 4 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    26                                        92     Count coming in to IF
+    26              1                         47             if (up_down)
+    28              1                         45             else 
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    33                                       159     Count coming in to IF
+    33              1                          9     assign max_count = (count_out == {WIDTH{1'b1}})? 1:0;
+    33              2                        150     assign max_count = (count_out == {WIDTH{1'b1}})? 1:0;
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    34                                       159     Count coming in to IF
+    34              1                         15     assign zero = (count_out == 0)? 1:0;
+    34              2                        144     assign zero = (count_out == 0)? 1:0;
+Branch totals: 2 hits of 2 branches = 100.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Conditions                       2         2         0   100.00%
+
+================================Condition Details================================
+
+Condition Coverage for instance /\counter_tb#DUT  --
+
+  File counter.v
+----------------Focused Condition View-------------------
+Line       33 Item    1  (count_out == {4{{1}}})
+Condition totals: 1 of 1 input term covered = 100.00%
+
+               Input Term   Covered  Reason for no coverage   Hint
+              -----------  --------  -----------------------  --------------
+  (count_out == {4{{1}}})         Y
+
+     Rows:       Hits  FEC Target                 Non-masking condition(s)      
+ ---------  ---------  --------------------       -------------------------     
+  Row   1:          1  (count_out == {4{{1}}})_0  -                             
+  Row   2:          1  (count_out == {4{{1}}})_1  -                             
+
+----------------Focused Condition View-------------------
+Line       34 Item    1  (count_out == 0)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+        Input Term   Covered  Reason for no coverage   Hint
+       -----------  --------  -----------------------  --------------
+  (count_out == 0)         Y
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:          1  (count_out == 0)_0    -                             
+  Row   2:          1  (count_out == 0)_1    -                             
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                       7         7         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /\counter_tb#DUT  --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File counter.v
+    8                                                module counter (clk ,rst_n, load_n, up_down, ce, data_load, count_out, max_count, zero);
+    9                                                parameter WIDTH = 4;                //(Valid values: 4, 6, 8, default: 4)
+    10                                               input clk;
+    11                                               input rst_n;                        //(active low sync rst)
+    12                                               input load_n;                       //(active low load)
+    13                                               input up_down;                      //high then increment counter, else decrement
+    14                                               input ce;                           //(clock enable signal
+    15                                               input [WIDTH-1:0] data_load;        //(load data to count_out output when the load_n signal is asserted)    
+    16                                               output reg [WIDTH-1:0] count_out;  
+    17                                               output max_count;                   //counter reaches the maximum value, this signal is high, else low)
+    18                                               output zero;                        //counter reaches the minimum value, this signal is high, else low)
+    19                                               
+    20              1                        205     always @(posedge clk) begin
+    21                                                   if (~rst_n)                     //Modification: changed comparison "!" to bitwise NOT "~"
+    22              1                          2             count_out <= 0;
+    23                                                   else if (~load_n)               //Modification: changed comparison "!" to bitwise NOT "~"
+    24              1                         71             count_out <= data_load;
+    25                                                   else if (ce)begin               //Fixed BUg: added Begin and End statments
+    26                                                       if (up_down)
+    27              1                         47                 count_out <= count_out + 1;
+    28                                                       else 
+    29              1                         45                 count_out <= count_out - 1;
+    30                                                   end
+    31                                               end
+    32                                               
+    33              1                        160     assign max_count = (count_out == {WIDTH{1'b1}})? 1:0;
+    34              1                        160     assign zero = (count_out == 0)? 1:0;
+
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                         30        30         0   100.00%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /\counter_tb#DUT  --
+
+                                              Node      1H->0L      0L->1H  "Coverage"
+                                              ---------------------------------------
+                                                ce           1           1      100.00 
+                                               clk           1           1      100.00 
+                                    count_out[3-0]           1           1      100.00 
+                                    data_load[0-3]           1           1      100.00 
+                                            load_n           1           1      100.00 
+                                         max_count           1           1      100.00 
+                                             rst_n           1           1      100.00 
+                                           up_down           1           1      100.00 
+                                              zero           1           1      100.00 
+
+Total Node Count     =         15 
+Toggled Node Count   =         15 
+Untoggled Node Count =          0 
+
+Toggle Coverage      =     100.00% (30 of 30 bins)
+
+
+Total Coverage By Instance (filtered view): 100.00%
+
