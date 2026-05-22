@@ -49,7 +49,7 @@ This project focuses on detecting bugs in a faulty, encrypted FIFO (First-In-Fir
 - FIFO testbench source files.
 - Simulation scripts and results.
 - Bug report document (listing all detected issues, evidence, and explanations).
-- (Optional) Suggestions for design corrections.
+- Suggestions for design corrections.
 
 ## Folder Structure
 
