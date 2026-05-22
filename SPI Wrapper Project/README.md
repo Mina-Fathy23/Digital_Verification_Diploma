@@ -55,8 +55,6 @@ This project targets the verification of an SPI Wrapper hardware design. The pro
 
 - Individual component testbenches and simulation scripts/results.
 - UVM SPI Wrapper testbench and reusable verification components.
-- Comprehensive bug report and documentation of verification methodology.
-- (Optional) Suggestions for improving the SPI design.
 
 ## Folder Structure
 
